@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 10px;
+    user-select: none;
+    max-height: 97vh;
+    max-width: 100vw;
+}
+
+.chart-container {
+    display: block;
+    width: 100%;
+    height: 80%;
+    background-color: #f0f0f0;
+    margin-bottom: 10px;
+}
+
+.controls {
+    height: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.unit-systems-boxes {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.unit-systems-boxes>.unit-system,
+.format-speed-box,
+.show-icons-box,
+.dark-mode-box,
+.theme-alt-box {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    padding: 0.5em;
+    margin: 0.2em;
+    background-color: #88888844;
+    border: 2px;
+    border-radius: 10px;
+}
+
+form {
+    display: flex;
+    width: fit-content;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin: 10px auto;
+    justify-content: center;
+}
+
+label {
+    margin-left: 5px;
+    padding: 10px;
+    padding-left: 0px;
+}
+
+input[type="text"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.footer {
+    margin: auto;
+    width: fit-content;
+    display: flex;
+    align-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer>* {
+    padding: 5px;
+}
+
+.dark-mode-box input:checked,
+div.chart-container {
+    color: #dadada;
+    background-color: #32373a;
+}
+
+/* Media query for mobile screens */
+@media screen and (max-width: 450px) {
+    .chart-container {
+        height: 60%;
+        margin-bottom: 5px;
+    }
+
+    .controls {
+        height: 20%;
+        justify-content: center;
+        margin-bottom: 5px;
+    }
+
+    .search-city {
+        margin-bottom: 5px;
+    }
+
+    .footer {
+        margin-bottom: 0;
+    }
+
+    .unit-systems-boxes>.unit-system,
+    .format-speed-box,
+    .show-icons-box,
+    .dark-mode-box,
+    .theme-alt-box {
+        padding: 0.2em;
+        margin: 0.2em;
+        border: 1px;
+    }
+}
